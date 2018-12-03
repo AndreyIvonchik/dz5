@@ -37,6 +37,58 @@ nav {
     -o-transform: scale(1.1);
 }
 
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    display: none;
+}
+    
+.slider-arrows {
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.9);
+}
+
+.arrow {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.arrow:hover {
+    opacity: 0.8;
+}
+
+#close {
+    background: url(../images/close.png) no-repeat;
+    background-size: cover;
+}
+
+#next {
+    background: url(../images/next.png) no-repeat;
+    background-size: cover;
+}
+
+#prev {
+    background: url(../images/prev.png) no-repeat;
+    background-size: cover;
+}
+
+#position {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 /* Loader */
 .lds-roller {
     display: inline-block;
@@ -57,6 +109,9 @@ nav {
     border-radius: 50%;
     background: #000;
     margin: -3px 0 0 -3px;
+  }
+  #slider-loader div:after {
+    background: rgba(255, 255, 255, 0.5);
   }
   .lds-roller div:nth-child(1) {
     animation-delay: -0.036s;

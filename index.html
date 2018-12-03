@@ -2,22 +2,42 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Gallerey</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/flexboxgrid.css">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/flexboxgrid.css" />
   </head>
   <body>
     <nav>
-      <div class="header row around-xs around-sm around-lg middle-xs middle-sm middle-lg">
-        <img id="logo" src="images/icon.png">
-        <h1>Gallerey</h1>
+      <div
+        class="header row around-xs around-sm around-lg middle-xs middle-sm middle-lg"
+      >
+        <img id="logo" src="images/icon.png" />
+        <h1>Gallery</h1>
       </div>
     </nav>
     <div class="container-fluid">
-      <div class="row center-xs center-sm center-lg">
+      <div class="row center-xs">
         <div id="loader" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       </div>
-      <div id="content" class="row center-xs center-sm center-lg middle-xs middle-sm middle-lg">
+      <div
+        id="content"
+        class="row center-xsg middle-xs"
+      ></div>
+    </div>
+    <div class="modalDialog" id="modal">
+      <div id="slider" class="slider container-fluid center-xs">
+        <div class="row end-xs">
+          <div id="close" class="arrow"></div>
+        </div>
+        <div class=" row center-xs">
+          <img id="foto" src="">
+          <div id="slider-loader" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+        <div class="slider-arrows row around-xs middle-xs ">
+          <div id="prev" class="arrow"></div>
+          <span id="position"></span>
+          <div id="next" class="arrow"></div>
+        </div>
       </div>
     </div>
   </body>
