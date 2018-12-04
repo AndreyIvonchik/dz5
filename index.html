@@ -5,12 +5,11 @@
     <title>Gallery</title>
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" href="CSS/flexboxgrid.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <nav>
-      <div
-        class="header row around-xs around-sm around-lg middle-xs middle-sm middle-lg"
-      >
+      <div class="header row around-xs around-sm around-lg middle-xs middle-sm middle-lg">
         <img id="logo" src="images/icon.png" />
         <h1>Gallery</h1>
       </div>
@@ -19,19 +18,16 @@
       <div class="row center-xs center-sm center-lg">
         <div id="loader" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       </div>
-      <div
-        id="content"
-        class="row center-xs center-sm center-lg middle-xs middle-sm middle-lg"
-      ></div>
+      <div id="content" class="row center-xs center-sm center-lg middle-xs middle-sm middle-lg"></div>
     </div>
     <div id="modal" class="wrapper-modal">
       <div class="modalDialog" >
         <div id="slider" class="slider">
-          <span id="position"></span>
-          <div id="close" class="arrow"></div>
-          <div id="slide">
-              <div id="prev" class="arrow"></div>
-              <div id="next" class="arrow"></div>
+          <span id="position" class="position"></span>
+          <div id="close" class="arrow close"></div>
+          <div id="slide" class="slide">
+            <div id="prev" class="arrow prev"></div>
+            <div id="next" class="arrow next"></div>
           </div>
           <div id="slider-loader" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </div>

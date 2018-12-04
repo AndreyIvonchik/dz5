@@ -26,11 +26,11 @@ function callbackFunc(result) {
 function sliderPlay(id) {
   if(id < 0) id = response.items.length - 1;
   if(id >= response.items.length) id = 0;
-  sliderLoader.style.display = "block";
-  slide.style.display = "none";
   var src = response.items[id].sizes["8"].url;
   var img = document.createElement("img");
   img.src = src;
+  sliderLoader.style.display = "block";
+  slide.style.display = "none";
   img.onload = function(){
     sliderLoader.style.display = "none";
     slide.style.display = "block";
