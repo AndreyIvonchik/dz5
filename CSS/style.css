@@ -13,7 +13,7 @@ nav {
     width: 100%;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 99999;
+    z-index: 1;
 }
 
 .header {
@@ -37,56 +37,102 @@ nav {
     -o-transform: scale(1.1);
 }
 
-.modalDialog {
+.wrapper-modal {
+    display: none;
     position: fixed;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    background: rgba(0,0,0,0.8);
-    z-index: 99999;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    display: none;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
 }
-    
-.slider-arrows {
-    border: 2px solid black;
-    border-radius: 10px;
-    background: rgba(0,0,0,0.9);
+
+.modalDialog {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1) translateZ(0);
+    max-width: 900px;
+    width: 100%;
+    background: #000;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.4), 0px 0px 0px 3000px rgba(0,0,0,.25);
+}
+
+#slider {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+}
+#slide {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    display: inline-block;
+    z-index: 1;
+}
+
+#image {
+    display: none;
 }
 
 .arrow {
+    position: absolute;
     display: block;
     width: 30px;
     height: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 3px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    opacity: 0.2;
 }
 
 .arrow:hover {
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #close {
+    opacity: 1;
+    top: 0;
+    right: 0;
     background: url(../images/close.png) no-repeat;
     background-size: cover;
+    z-index: 3;
 }
 
 #next {
+    top: 50%;
+    right: 0;
+    transform: translate(-100%,-50%) scale(1) translateZ(0);
     background: url(../images/next.png) no-repeat;
     background-size: cover;
 }
 
 #prev {
+    top: 50%;
+    left: 0;
+    transform: translate(100%,-50%) scale(1) translateZ(0);
     background: url(../images/prev.png) no-repeat;
     background-size: cover;
 }
 
+#slider-loader {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1) translateZ(0);
+}
+
 #position {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,0) scale(1) translateZ(0);
     color: rgba(255, 255, 255, 0.5);
+    z-index: 3;
+    background: rgba(0,0,0,0.9);
+    border-radius: 3px;
+    padding: 3px;
 }
 
 /* Loader */

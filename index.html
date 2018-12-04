@@ -16,30 +16,27 @@
       </div>
     </nav>
     <div class="container-fluid">
-      <div class="row center-xs">
+      <div class="row center-xs center-sm center-lg">
         <div id="loader" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       </div>
       <div
         id="content"
-        class="row center-xsg middle-xs"
+        class="row center-xs center-sm center-lg middle-xs middle-sm middle-lg"
       ></div>
     </div>
-    <div class="modalDialog" id="modal">
-      <div id="slider" class="slider container-fluid center-xs">
-        <div class="row end-xs">
+    <div id="modal" class="wrapper-modal">
+      <div class="modalDialog" >
+        <div id="slider" class="slider">
+          <span id="position"></span>
           <div id="close" class="arrow"></div>
-        </div>
-        <div class=" row center-xs">
-          <img id="foto" src="">
+          <div id="slide">
+              <div id="prev" class="arrow"></div>
+              <div id="next" class="arrow"></div>
+          </div>
           <div id="slider-loader" class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </div>
-        <div class="slider-arrows row around-xs middle-xs ">
-          <div id="prev" class="arrow"></div>
-          <span id="position"></span>
-          <div id="next" class="arrow"></div>
-        </div>
       </div>
-    </div>
+  </div>
   </body>
 </html>
 
