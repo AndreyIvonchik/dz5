@@ -41,23 +41,38 @@ function sliderPlay(id) {
 }
 
 document.addEventListener("click", function(element) {
-  if(element.target && element.target.className == "image"){
+  if(element.target.className == "image"){
     var id = +element.target.id.split("-")[1];
 
     modal.style.display = "block";
     sliderPlay(id);
   }
-  if(element.target && element.target.id == "next"){
+  if(element.target.id == "next"){
     var id = +position.innerHTML.split("из")[0] - 1;
 
     sliderPlay(id + 1);
   }
-  if(element.target && element.target.id == "prev"){
+  if(element.target.id == "prev"){
     var id = +position.innerHTML.split("из")[0] - 1;
 
     sliderPlay(id - 1);
   }
   if(element.target.id == "close" || element.target.id == "modal"){
     modal.style.display = "none";
+  }
+});
+
+document.addEventListener("keyup", function(event) {
+  if (modal.style.display == "block" && slide.style.display == "block" ){
+    if (event.key == "ArrowRight"){
+      var id = +position.innerHTML.split("из")[0] - 1;
+  
+      sliderPlay(id + 1);
+    }
+    if (event.key == "ArrowLeft"){
+      var id = +position.innerHTML.split("из")[0] - 1;
+  
+      sliderPlay(id - 1);
+    }
   }
 });
